@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>netstandard2.1;net5;net6</TargetFrameworks>
+	  <LangVersion>9</LangVersion>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<ProjectReference Include="..\..\..\..\..\Simple.Ux\Simple.Ux.Data\Simple.Ux.Data.csproj" />
+    <ProjectReference Include="..\Simple.Ux.Data.Unity\Simple.Ux.Data.Unity.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\_external\2021.2.7f1\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+		<HintPath>..\..\_external\2021.2.7f1\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+		<HintPath>..\..\_external\2021.2.7f1\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.CoreModule">
+		<HintPath>..\..\_external\2021.2.7f1\UnityEditor.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+		<HintPath>..\..\_external\2021.2.7f1\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\_external\2021.2.7f1\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\_external\2021.2.7f1\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\_external\2021.2.7f1\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\_external\2021.2.7f1\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\_external\2021.2.7f1\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+	
+  <Import Project="post-build-copy.csproj" Condition="Exists('post-build-copy.csproj')" />
+
+</Project>
